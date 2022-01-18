@@ -1,0 +1,62 @@
+body {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BORDINHA FUNDINHO */
+.wrapper {
+    width: 180px;
+    height: 80px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    box-shadow: 0px 7px 21px rgba(0, 0,0, .2);
+}
+
+/* ISSO AQUI FAZ OS JOINHA VIRAREM UMA SELECAO TIPO 
+DE FORMULARIO SE VOCE OLHAR NO HTML VAI VER LA O INPUT */
+.radio-group {
+    position: relative;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+}
+
+.radio-group input[type="radio"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+/* AQUI EH A COR  */
+.radio-group input[type="radio"] + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: seagreen;
+    transform: scale(.8);
+}
+
+/* AQUI EH A COR DO QUANDO TA CLICADO */
+.radio-group input[type="radio"]:checked + label {
+    color: springgreen;
+    transform: scale(1.1);
+}
